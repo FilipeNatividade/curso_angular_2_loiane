@@ -1,0 +1,115 @@
+<!-- <section class="property-biding"> -->
+<!-- <article>
+    <h3>interpolation / interpolação</h3>
+    <p>string renderizada com interpolação: {{ url }}</p>
+    <p>resultado de 1 + 1 é: {{1+1}}</p>
+    <p>resultado de 1 + 1 não é: {{1+1 + getValor()}}</p>
+    <p>curso angular e gosto do curso: {{getCurtirCurso()}}</p>
+  </article>
+
+  <article>
+    <h3>
+      property biding
+    </h3>
+
+    <img src="{{ urlImage }}" alt="">
+    <img [src]="urlImage" alt="">
+    aqui o de cima e do de bixo swão iguais, o de baixo seria como o angular trabalha quando se usa o par de []
+    <img bind-src="urlImage" alt="">
+  </article> -->
+<!-- <article>
+    <h3>class e style binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br>
+      <br>
+      <div class="alert {{classe.value}}" role="alert">
+        Texto colorido conforme valor do combobox
+      </div>
+      <tr>
+        <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+          Sucesso
+        </div>
+        <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+          Info
+        </div>
+        <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+          Alerta
+        </div>
+        <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+          Erro
+        </div>
+        <div class="alert alert-danger" role="alert" [style.display]="
+        classe.value === 'alert-danger' ? 'block' : 'none'
+        ">
+          esse texto somente em caso de erro.
+        </div>
+
+
+    </div>
+  </article> -->
+
+<!-- <article>
+    <h3>class e style binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br/>
+      <br/>
+      <div class="alert {{classe.value}}" role="alert">
+        {{classe.value}}
+      </div>
+    </div>
+  </article> -->
+<!-- </section> -->
+<!-- <section class="event-biding">
+  <article>
+    <h3>Event biding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">Clique-me</button>
+    </div>
+    <br><br>
+    <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor($event)" (blur)="salvarValorBlur(campoInput.value)" #campoInput>
+    <p>Valor atual: {{valorAtual}}</p>
+    <p>Valor salvo: {{valorSalvo}}</p>
+    <p>Valor salvo blur: {{ valorSalvoBlur }}</p>
+
+    <br><br>
+    <div>
+      <h3>Exemplo Mauro</h3>
+      <input type="text" required [(ngModel)]="teste" />
+      <p>Valor teswte: {{teste}}</p>
+    </div>
+    <br><br>
+
+    <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+      Passe o mause sobre mim
+    </span>
+
+  </article>
+</section> -->
+
+
+<!-- <app-meu-form /> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+    <app-curso [nomeDoCurso]="nomeDoCurso" />
+
+    <!-- <contador  valor="10"/>
+    só precisa por o cochetes de properties  bind se for uma variavel igual a baixo, se for um valor fixo, é igual de cima -->
+    <contador  [valor]="valorInicial" (mudouValor)="onMudouValor($event)"/>
+  </article>
+</section>

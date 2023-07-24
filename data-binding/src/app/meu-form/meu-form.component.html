@@ -1,0 +1,25 @@
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+      <input type="text" [value]="nome" (input)="nome = $any($event.target).value">
+      <br><br>
+      <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event">
+
+      <br><br>
+      <input type="text" [(ngModel)]="nome">
+      <br><br>
+      <input type="text" bindon-ngModel="nome">
+      <p>Você digitou: {{nome}}</p>
+    </div>
+
+    <div>
+      <p>{{pessoa.nome ? 'Meu nome é ' + pessoa.nome : ''}} e tenho {{pessoa.idade}} anos de idade</p>
+      <!-- <p *ngIf="pessoa.nome">Nome: {{ pessoa.nome }}</p>
+      <p *ngIf="!pessoa.nome">Sem nome</p> -->
+      <input type="text" [(ngModel)]="pessoa.nome">
+      {{''}}
+      <input type="text" [(ngModel)]="pessoa.idade">
+    </div>
+  </article>
+</section>
